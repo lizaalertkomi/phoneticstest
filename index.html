@@ -264,7 +264,7 @@
         document.getElementById('result-screen').style.display = 'block';
 
         // ОТПРАВКА ДАННЫХ В ВАШУ GOOGLE ТАБЛИЦУ (Замените URL-адрес на вашу ссылку /exec при необходимости)
-        var googleScriptUrl = "https://google.com";
+        var googleScriptUrl = "https://script.google.com/macros/s/AKfycbzrlAQtwJKQcaxmNLuQRew0561tIeb6qUl5GNvhEqfuSLaQyXdR6X4XpuaJxwcyi49Dgg/exec";
         var targetUrl = googleScriptUrl + "?name=" + encodeURIComponent(userFullName) + "&callsign=" + encodeURIComponent(userCallsign || "Нет") + "&score=" + score + "&time=" + encodeURIComponent(displayTime);
         fetch(targetUrl, { method: "POST", mode: "no-cors" }).catch(function(err) { console.error(err); });
     }
